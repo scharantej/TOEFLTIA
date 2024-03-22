@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Progress Tracker</title>
+</head>
+<body>
+<h1>Progress Tracker</h1>
+<p>Monitor your TOEFL preparation journey and track your progress.</p>
+<ul>
+<li>Practice Tests: 3</li>
+<li>Vocabulary Learned: 100</li>
+<li>Grammar Exercises Completed: 50</li>
+</ul>
+<canvas id="myChart"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+// The type of chart we want to create
+type: 'bar',
+
+// The data for our dataset
+data: {
+labels: ['Practice Tests', 'Vocabulary Learned', 'Grammar Exercises'],
+datasets: [{
+label: 'My Progress',
+backgroundColor: 'rgb(255, 99, 132)',
+borderColor: 'rgb(255, 99, 132)',
+data: [3, 100, 50]
+}]
+},
+
+// Configuration options go here
+options: {}
+});
+</script>
+</body>
+</html>
+
+
